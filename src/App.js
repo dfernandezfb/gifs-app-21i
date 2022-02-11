@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Container, Row, Col} from 'react-bootstrap'
+import styled from 'styled-components'
+import Results from './components/Results/Results';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const LateralSearch = styled(Col)`
+background-color: tomato;
+height:100vh;
+
+`
+
+function App (){
+  return(
+      <Container fluid>
+        <Row>
+          <LateralSearch xs={2}>
+
+          </LateralSearch>
+          <Col xs={10} className='d-flex flex-wrap'>
+            <Results/>
+          </Col>
+        </Row>
+      </Container>
+  )
 }
 
-export default App;
+export default App
